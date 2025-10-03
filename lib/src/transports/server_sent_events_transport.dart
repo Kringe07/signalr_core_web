@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:http/http.dart';
-import 'package:signalr_core/src/logger.dart';
-import 'package:signalr_core/src/transport.dart';
-import 'package:signalr_core/src/utils.dart';
+import 'package:signalr_core_web/src/logger.dart';
+import 'package:signalr_core_web/src/transport.dart';
+import 'package:signalr_core_web/src/utils.dart';
 import 'package:sse_channel/sse_channel.dart';
 
 class ServerSentEventsTransport implements Transport {

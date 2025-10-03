@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:typed_data';
 
 import 'package:http/http.dart';
-import 'package:signalr_core/src/logger.dart';
+import 'package:signalr_core_web/src/logger.dart';
 
 typedef OnReceive = void Function(dynamic data);
 typedef OnClose = void Function(Exception? error);

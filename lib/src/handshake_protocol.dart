@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
-import 'package:signalr_core/src/text_message_format.dart';
+import 'package:signalr_core_web/src/text_message_format.dart';
 
 class HandshakeRequestMessage {
   HandshakeRequestMessage({

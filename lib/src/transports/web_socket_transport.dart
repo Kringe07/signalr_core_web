@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:http/http.dart';
-import 'package:signalr_core/src/logger.dart';
-import 'package:signalr_core/src/transport.dart';
-import 'package:signalr_core/src/utils.dart';
+import 'package:signalr_core_web/src/logger.dart';
+import 'package:signalr_core_web/src/transport.dart';
+import 'package:signalr_core_web/src/utils.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 
 import 'web_socket_channel_api.dart'

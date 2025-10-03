@@ -1,10 +1,10 @@
 import 'dart:convert';
 
-import 'package:signalr_core/src/hub_protocol.dart';
-import 'package:signalr_core/src/logger.dart';
-import 'package:signalr_core/src/text_message_format.dart';
-import 'package:signalr_core/src/transport.dart';
-import 'package:signalr_core/src/utils.dart';
+import 'package:signalr_core_web/src/hub_protocol.dart';
+import 'package:signalr_core_web/src/logger.dart';
+import 'package:signalr_core_web/src/text_message_format.dart';
+import 'package:signalr_core_web/src/transport.dart';
+import 'package:signalr_core_web/src/utils.dart';
 
 const String jsonHubProtocolName = 'json';
 
