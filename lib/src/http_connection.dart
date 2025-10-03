@@ -11,6 +11,9 @@ import 'package:signalr_core/src/transports/long_polling_transport.dart';
 import 'package:signalr_core/src/transports/server_sent_events_transport.dart';
 import 'package:signalr_core/src/transports/web_socket_transport.dart';
 import 'package:signalr_core/src/utils.dart';
+import 'http_client_factory_stub.dart'
+  if (dart.library.html) 'http_client_factory_html.dart'
+  if (dart.library.io) 'http_client_factory_io.dart';
 
 enum ConnectionState {
   connecting,
@@ -120,9 +123,9 @@ class HttpConnection implements Connection {
     required String? url,
     required HttpConnectionOptions options,
   })  : baseUrl = url,
-        _client = (options.client != null)
-            ? options.client
-            : http.Client() as http.BaseClient,
+    _client = (options.client != null)
+      ? options.client
+      : createHttpClient(options.withCredentials),
         _options = options {
     _logging = (options.logging != null) ? options.logging : (l, m) => {};
     _connectionState = ConnectionState.disconnected;
@@ -693,13 +696,15 @@ class HttpConnection implements Connection {
             accessTokenFactory: _accessTokenFactory,
             logMessageContent: _options.logMessageContent,
             logging: _logging,
-            client: _client);
+            client: _client,
+            withCredentials: _options.withCredentials);
       case HttpTransportType.longPolling:
         return LongPollingTransport(
             accessTokenFactory: _accessTokenFactory,
             logMessageContent: _options.logMessageContent,
             log: _logging,
-            client: _client);
+            client: _client,
+            withCredentials: _options.withCredentials);
     }
     return null;
   }
