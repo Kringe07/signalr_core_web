@@ -1,5 +1,5 @@
-import 'package:signalr_core/src/transport.dart' as transfer;
-import 'package:signalr_core/src/utils.dart';
+import 'package:signalr_core_web/src/transport.dart' as transfer;
+import 'package:signalr_core_web/src/utils.dart';
 
 abstract class Connection {
   Connection({

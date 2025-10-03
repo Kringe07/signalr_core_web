@@ -3,14 +3,14 @@ import 'dart:convert';
 import 'dart:typed_data';
 
 import 'package:http/http.dart' as http;
-import 'package:signalr_core/src/connection.dart';
-import 'package:signalr_core/src/http_connection_options.dart';
-import 'package:signalr_core/src/logger.dart';
-import 'package:signalr_core/src/transport.dart';
-import 'package:signalr_core/src/transports/long_polling_transport.dart';
-import 'package:signalr_core/src/transports/server_sent_events_transport.dart';
-import 'package:signalr_core/src/transports/web_socket_transport.dart';
-import 'package:signalr_core/src/utils.dart';
+import 'package:signalr_core_web/src/connection.dart';
+import 'package:signalr_core_web/src/http_connection_options.dart';
+import 'package:signalr_core_web/src/logger.dart';
+import 'package:signalr_core_web/src/transport.dart';
+import 'package:signalr_core_web/src/transports/long_polling_transport.dart';
+import 'package:signalr_core_web/src/transports/server_sent_events_transport.dart';
+import 'package:signalr_core_web/src/transports/web_socket_transport.dart';
+import 'package:signalr_core_web/src/utils.dart';
 import 'http_client_factory_stub.dart'
   if (dart.library.html) 'http_client_factory_html.dart'
   if (dart.library.io) 'http_client_factory_io.dart';

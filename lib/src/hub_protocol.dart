@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:signalr_core/src/transport.dart';
-import 'package:signalr_core/src/utils.dart';
+import 'package:signalr_core_web/src/transport.dart';
+import 'package:signalr_core_web/src/utils.dart';
 
 /// Defines the type of a Hub Message.
 enum MessageType {
